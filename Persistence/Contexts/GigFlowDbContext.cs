@@ -18,6 +18,10 @@ namespace GigFlow.Persistence.Contexts
         public DbSet<Milestone> Milestones { get; set; } = null!;
         public DbSet<Review> Reviews { get; set; } = null!;
         public DbSet<Portfolio> Portfolios { get; set; } = null!;
+        public DbSet<AppUser> AppUsers { get; set; } = null!;
+        public DbSet<FreelancerProfile> FreelancerProfiles { get; set; } = null!;
+        public DbSet<ClientProfile> ClientProfiles { get; set; } = null!;
+        public DbSet<FreelancerSkill> FreelancerSkills { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

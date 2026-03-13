@@ -62,7 +62,7 @@ public class ExceptionMiddleware
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Beklenmedik bir hata oluştu");
+            _logger.LogError(ex, "Bir hata oluştu");
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             context.Response.ContentType = "application/json";
 

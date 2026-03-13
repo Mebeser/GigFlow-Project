@@ -49,8 +49,9 @@ public class ContractsController : ControllerBase
         return Ok(result);
     }
 
-    /// <summary>Sözleşme durumunu günceller. İptal edilmiş sözleşmeler güncellenemez.</summary>
-    /// <param name="id">Güncellenecek sözleşme ID'si</param>
+    /// <summary>Sözleşme durumunu günceller</summary>
+    /// <param name="id">Sözleşme ID'si</param>
+    /// <param name="command">Yeni durum bilgileri</param>
     [HttpPatch("{id:guid}/status")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

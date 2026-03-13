@@ -13,14 +13,17 @@ namespace GigFlow.Presentation.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 [Produces("application/json")]
+[Microsoft.AspNetCore.Authorization.Authorize]
 public class JobPostingsController : ControllerBase
 {
     private readonly IMediator _mediator;
 
     public JobPostingsController(IMediator mediator) => _mediator = mediator;
 
-    /// <summary>İş ilanlarını filtre ve sayfalama ile listeler</summary>
-    /// <param name="query">Filtreleme ve sayfalama parametreleri (SearchTerm, CategoryId, PageNumber, PageSize)</param>
+    private Guid GetUserId() => Guid.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value!);
+
+    /// <summary>İş ilanlarını filtreleyerek listeler</summary>
+    /// <param name="query">Arama ve sayfalama kriterleri</param>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAll([FromQuery] GetAllJobPostingsQuery query)
@@ -51,24 +54,30 @@ public class JobPostingsController : ControllerBase
         return Ok(result);
     }
 
-    /// <summary>Yeni iş ilanı oluşturur. BudgetMax >= BudgetMin ve 1-10 arası skill zorunludur.</summary>
+    /// <summary>Yeni iş ilanı oluşturur</summary>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> Create([FromBody] CreateJobPostingCommand command)
     {
+        command.ClientId = GetUserId();
         var id = await _mediator.Send(command);
         return CreatedAtAction(nameof(GetById), new { id }, id);
     }
 
-    /// <summary>Mevcut iş ilanını günceller. Tamamlanmış ilanlar güncellenemez.</summary>
-    /// <param name="id">Güncellenecek ilan ID'si</param>
+    /// <summary>İş ilanını günceller</summary>
+    /// <param name="id">İlan ID'si</param>
+    /// <param name="command">Güncel ilan bilgileri</param>
     [HttpPut("{id:guid}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Update(Guid id, [FromBody] UpdateJobPostingCommand command)
     {
+        var posting = await _mediator.Send(new GetJobPostingByIdQuery { Id = id });
+        if (posting == null) return NotFound();
+        if (posting.ClientId != GetUserId()) return Forbid();
+
         command.Id = id;
         await _mediator.Send(command);
         return NoContent();
@@ -81,6 +90,10 @@ public class JobPostingsController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Delete(Guid id)
     {
+        var posting = await _mediator.Send(new GetJobPostingByIdQuery { Id = id });
+        if (posting == null) return NotFound();
+        if (posting.ClientId != GetUserId()) return Forbid();
+
         await _mediator.Send(new DeleteJobPostingCommand { Id = id });
         return NoContent();
     }

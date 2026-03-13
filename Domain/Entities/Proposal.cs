@@ -9,6 +9,7 @@ namespace GigFlow.Domain.Entities
         public JobPosting JobPosting { get; set; } = null!;
         
         public Guid? FreelancerId { get; set; }
+        public virtual FreelancerProfile? Freelancer { get; set; }
         
         public string CoverLetter { get; set; } = string.Empty;
         public decimal ProposedAmount { get; set; }

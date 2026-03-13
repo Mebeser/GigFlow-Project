@@ -57,6 +57,7 @@ C:\Users\Meric\Desktop\GigFlow\Persistence\obj\Debug\net10.0\Persistence.Generat
 C:\Users\Meric\Desktop\GigFlow\Persistence\obj\Debug\net10.0\Persistence.AssemblyInfoInputs.cache
 C:\Users\Meric\Desktop\GigFlow\Persistence\obj\Debug\net10.0\Persistence.AssemblyInfo.cs
 C:\Users\Meric\Desktop\GigFlow\Persistence\obj\Debug\net10.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Meric\Desktop\GigFlow\Persistence\obj\Debug\net10.0\Persistence.sourcelink.json
 C:\Users\Meric\Desktop\GigFlow\Persistence\obj\Debug\net10.0\Persiste.61C28332.Up2Date
 C:\Users\Meric\Desktop\GigFlow\Persistence\obj\Debug\net10.0\Persistence.dll
 C:\Users\Meric\Desktop\GigFlow\Persistence\obj\Debug\net10.0\refint\Persistence.dll

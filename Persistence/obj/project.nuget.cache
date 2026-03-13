@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "rqzuhOafPaM=",
+  "dgSpecHash": "W9HywqrJ7Ic=",
   "success": true,
   "projectFilePath": "C:\\Users\\Meric\\Desktop\\GigFlow\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Meric\\.nuget\\packages\\automapper\\16.1.0\\automapper.16.1.0.nupkg.sha512",
     "C:\\Users\\Meric\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\Meric\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
+    "C:\\Users\\Meric\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
     "C:\\Users\\Meric\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\Meric\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
     "C:\\Users\\Meric\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

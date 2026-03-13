@@ -1,0 +1,484 @@
+2026-03-13 11:07:31.534 +03:00 [INF] Now listening on: http://localhost:5087
+2026-03-13 11:07:31.619 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 11:07:31.622 +03:00 [INF] Hosting environment: Development
+2026-03-13 11:07:31.626 +03:00 [INF] Content root path: C:\Users\Meric\Desktop\GigFlow\Presentation
+2026-03-13 11:07:42.431 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/ - null null
+2026-03-13 11:07:42.868 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/ - 301 0 null 463.7817ms
+2026-03-13 11:07:44.116 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 11:07:45.554 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 200 null text/html;charset=utf-8 1439.3849ms
+2026-03-13 11:07:45.633 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.css - null null
+2026-03-13 11:07:45.636 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger-ui-bundle.js - null null
+2026-03-13 11:07:45.656 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger-ui-standalone-preset.js - null null
+2026-03-13 11:07:45.680 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.js - null null
+2026-03-13 11:07:46.079 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger-ui.css - null null
+2026-03-13 11:07:46.146 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.js - 200 null application/javascript;charset=utf-8 465.7574ms
+2026-03-13 11:07:46.160 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.css - 200 152 text/css 526.7777ms
+2026-03-13 11:07:46.208 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger-ui-bundle.js - 200 417806 text/javascript 571.8335ms
+2026-03-13 11:07:46.208 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger-ui-standalone-preset.js - 200 76581 text/javascript 552.2121ms
+2026-03-13 11:07:46.240 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger-ui.css - 200 26388 text/css 160.5828ms
+2026-03-13 11:07:47.818 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/v1/swagger.json - null null
+2026-03-13 11:07:47.863 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/favicon-32x32.png - null null
+2026-03-13 11:07:48.789 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/favicon-32x32.png - 200 628 image/png 926.3944ms
+2026-03-13 11:07:49.313 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 1495.4115ms
+2026-03-13 11:08:41.679 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5087/api/JobPostings - application/json 385
+2026-03-13 11:08:41.705 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-03-13 11:08:41.728 +03:00 [INF] Executing endpoint 'GigFlow.Presentation.Controllers.JobPostingsController.Create (Presentation)'
+2026-03-13 11:08:41.821 +03:00 [INF] Route matched with {action = "Create", controller = "JobPostings"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(GigFlow.Application.Features.JobPostings.Commands.CreateJobPosting.CreateJobPostingCommand) on controller GigFlow.Presentation.Controllers.JobPostingsController (Presentation).
+2026-03-13 11:08:41.870 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-13 11:08:42.098 +03:00 [INF] Executing action method GigFlow.Presentation.Controllers.JobPostingsController.Create (Presentation) - Validation state: "Valid"
+2026-03-13 11:08:42.318 +03:00 [INF] Executed action GigFlow.Presentation.Controllers.JobPostingsController.Create (Presentation) in 473.3031ms
+2026-03-13 11:08:42.325 +03:00 [INF] Executed endpoint 'GigFlow.Presentation.Controllers.JobPostingsController.Create (Presentation)'
+2026-03-13 11:08:42.330 +03:00 [WRN] Validation hatası oluştu.
+2026-03-13 11:08:42.358 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5087/api/JobPostings - 400 null application/json 679.6092ms
+2026-03-13 12:32:50.826 +03:00 [INF] Application is shutting down...
+2026-03-13 13:00:50.540 +03:00 [INF] Now listening on: http://localhost:5087
+2026-03-13 13:00:50.638 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 13:00:50.642 +03:00 [INF] Hosting environment: Development
+2026-03-13 13:00:50.656 +03:00 [INF] Content root path: C:\Users\Meric\Desktop\GigFlow\Presentation
+2026-03-13 13:00:53.220 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 13:00:53.775 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 304 null null 567.5651ms
+2026-03-13 13:00:53.830 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.css - null null
+2026-03-13 13:00:53.830 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger-ui-bundle.js - null null
+2026-03-13 13:00:53.830 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger-ui.css - null null
+2026-03-13 13:00:53.830 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger-ui-standalone-preset.js - null null
+2026-03-13 13:00:53.830 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.js - null null
+2026-03-13 13:00:53.879 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger-ui.css - 304 null null 49.293ms
+2026-03-13 13:00:53.880 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.css - 304 null null 51.8707ms
+2026-03-13 13:00:53.880 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger-ui-bundle.js - 304 null null 53.0999ms
+2026-03-13 13:00:53.917 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger-ui-standalone-preset.js - 304 null null 87.3868ms
+2026-03-13 13:00:53.936 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.js - 304 null null 105.7139ms
+2026-03-13 13:00:55.220 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/v1/swagger.json - null null
+2026-03-13 13:00:55.907 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 686.8725ms
+2026-03-13 13:02:03.552 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5087/api/Users/register - application/json 123
+2026-03-13 13:02:03.624 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-03-13 13:02:03.638 +03:00 [INF] Executing endpoint 'GigFlow.Presentation.Controllers.UsersController.Register (Presentation)'
+2026-03-13 13:02:03.684 +03:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(GigFlow.Application.Features.Users.Commands.CreateUser.CreateUserCommand) on controller GigFlow.Presentation.Controllers.UsersController (Presentation).
+2026-03-13 13:02:03.711 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-13 13:02:03.823 +03:00 [INF] Executing action method GigFlow.Presentation.Controllers.UsersController.Register (Presentation) - Validation state: "Valid"
+2026-03-13 13:02:07.425 +03:00 [INF] Executed DbCommand (86ms) [Parameters=[@request_Email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreatedDate], [a].[Email], [a].[FirstName], [a].[IsActive], [a].[LastName], [a].[PasswordHash], [a].[UpdatedDate], [a].[UserType]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @request_Email
+2026-03-13 13:02:08.400 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 200), @p3='?' (Size = 100), @p4='?' (DbType = Boolean), @p5='?' (Size = 100), @p6='?' (Size = 4000), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [CreatedDate], [Email], [FirstName], [IsActive], [LastName], [PasswordHash], [UpdatedDate], [UserType])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-03-13 13:02:08.595 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Precision = 3) (Scale = 2) (DbType = Decimal), @p2='?' (Size = 3000), @p3='?' (DbType = DateTime2), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (Size = 200), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [FreelancerProfiles] ([Id], [AverageRating], [Bio], [CreatedDate], [HourlyRate], [Title], [TotalEarnings], [UpdatedDate], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-03-13 13:02:08.617 +03:00 [INF] Executed action method GigFlow.Presentation.Controllers.UsersController.Register (Presentation), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 4776.9634ms.
+2026-03-13 13:02:08.649 +03:00 [INF] Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`1[[System.Guid, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-13 13:02:08.739 +03:00 [INF] Executed action GigFlow.Presentation.Controllers.UsersController.Register (Presentation) in 5038.3791ms
+2026-03-13 13:02:08.748 +03:00 [INF] Executed endpoint 'GigFlow.Presentation.Controllers.UsersController.Register (Presentation)'
+2026-03-13 13:02:08.781 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5087/api/Users/register - 201 null application/json; charset=utf-8 5229.1338ms
+2026-03-13 13:11:00.696 +03:00 [INF] Application is shutting down...
+2026-03-13 14:48:22.438 +03:00 [INF] User profile is available. Using 'C:\Users\Meric\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 14:48:22.542 +03:00 [INF] Creating key {80bd5fd2-94ba-4188-a4a2-114ce5fb6163} with creation date 2026-03-13 11:48:22Z, activation date 2026-03-13 11:48:22Z, and expiration date 2026-06-11 11:48:22Z.
+2026-03-13 14:48:22.582 +03:00 [INF] Writing data to file 'C:\Users\Meric\AppData\Local\ASP.NET\DataProtection-Keys\key-80bd5fd2-94ba-4188-a4a2-114ce5fb6163.xml'.
+2026-03-13 14:48:22.712 +03:00 [INF] Now listening on: http://localhost:5087
+2026-03-13 14:48:22.719 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 14:48:22.722 +03:00 [INF] Hosting environment: Development
+2026-03-13 14:48:22.725 +03:00 [INF] Content root path: C:\Users\Meric\Desktop\GigFlow\Presentation
+2026-03-13 14:48:24.907 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 14:48:24.984 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-03-13 14:48:25.070 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 404 0 null 174.7343ms
+2026-03-13 14:48:25.117 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5087/index.html, Response status code: 404
+2026-03-13 14:48:26.991 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 14:48:27.006 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 404 0 null 17.0287ms
+2026-03-13 14:48:27.023 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5087/index.html, Response status code: 404
+2026-03-13 14:48:45.886 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/scalar/v1 - null null
+2026-03-13 14:48:45.911 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName}'
+2026-03-13 14:48:45.945 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 14:48:45.953 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName}'
+2026-03-13 14:48:45.958 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/scalar/v1 - 200 722 text/html 72.0596ms
+2026-03-13 14:48:46.015 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/scalar/scalar.js - null null
+2026-03-13 14:48:46.023 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName}'
+2026-03-13 14:48:46.029 +03:00 [INF] Sending file with download name ''.
+2026-03-13 14:48:46.074 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName}'
+2026-03-13 14:48:46.081 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/scalar/scalar.js - 200 2681352 text/javascript 66.3442ms
+2026-03-13 14:48:46.962 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 14:48:46.980 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 14:48:47.550 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/favicon.ico - null null
+2026-03-13 14:48:47.559 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/favicon.ico - 404 0 null 9.146ms
+2026-03-13 14:48:47.569 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5087/favicon.ico, Response status code: 404
+2026-03-13 14:48:47.730 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 14:48:47.731 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 14:48:47.734 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 771.6554ms
+2026-03-13 14:48:47.742 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 14:48:47.816 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 14:48:47.820 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 88.9393ms
+2026-03-13 14:56:04.127 +03:00 [INF] Application is shutting down...
+2026-03-13 15:13:54.372 +03:00 [INF] User profile is available. Using 'C:\Users\Meric\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 15:13:54.571 +03:00 [INF] Now listening on: http://localhost:5087
+2026-03-13 15:13:54.578 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 15:13:54.581 +03:00 [INF] Hosting environment: Development
+2026-03-13 15:13:54.586 +03:00 [INF] Content root path: C:\Users\Meric\Desktop\GigFlow\Presentation
+2026-03-13 15:13:59.773 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 15:13:59.902 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-03-13 15:14:00.167 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 404 0 null 418.0203ms
+2026-03-13 15:14:00.201 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5087/index.html, Response status code: 404
+2026-03-13 15:14:28.453 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/v1 - null null
+2026-03-13 15:14:28.473 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:14:28.488 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 15:14:28.494 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:14:28.499 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/v1 - 200 705 text/html 48.0822ms
+2026-03-13 15:14:28.552 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/scalar.js - null null
+2026-03-13 15:14:28.565 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:14:28.570 +03:00 [INF] Sending file with download name ''.
+2026-03-13 15:14:28.606 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:14:28.615 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/scalar.js - 200 2681352 text/javascript 62.5884ms
+2026-03-13 15:14:29.526 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:14:29.539 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:14:30.519 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:14:30.521 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:14:30.523 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 997.459ms
+2026-03-13 15:14:30.530 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:14:30.614 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:14:30.618 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 96.199ms
+2026-03-13 15:15:08.725 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 15:15:08.745 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 404 0 null 19.8528ms
+2026-03-13 15:15:08.758 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5087/index.html, Response status code: 404
+2026-03-13 15:16:06.952 +03:00 [INF] Application is shutting down...
+2026-03-13 15:17:15.821 +03:00 [INF] User profile is available. Using 'C:\Users\Meric\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 15:17:16.194 +03:00 [INF] Now listening on: http://localhost:5087
+2026-03-13 15:17:16.199 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 15:17:16.202 +03:00 [INF] Hosting environment: Development
+2026-03-13 15:17:16.205 +03:00 [INF] Content root path: C:\Users\Meric\Desktop\GigFlow\Presentation
+2026-03-13 15:17:22.908 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 15:17:22.968 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-03-13 15:17:23.032 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 404 0 null 135.4649ms
+2026-03-13 15:17:23.059 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5087/index.html, Response status code: 404
+2026-03-13 15:17:33.080 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 15:17:33.095 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 404 0 null 18.0196ms
+2026-03-13 15:17:33.106 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5087/index.html, Response status code: 404
+2026-03-13 15:23:46.317 +03:00 [INF] Application is shutting down...
+2026-03-13 15:25:45.401 +03:00 [INF] User profile is available. Using 'C:\Users\Meric\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 15:25:45.734 +03:00 [INF] Now listening on: http://localhost:5087
+2026-03-13 15:25:45.740 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 15:25:45.743 +03:00 [INF] Hosting environment: Development
+2026-03-13 15:25:45.749 +03:00 [INF] Content root path: C:\Users\Meric\Desktop\GigFlow\Presentation
+2026-03-13 15:25:50.458 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 15:25:50.634 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-03-13 15:25:50.782 +03:00 [INF] Executing endpoint 'HTTP: GET /index.html'
+2026-03-13 15:25:50.789 +03:00 [INF] Executing RedirectResult, redirecting to /swagger/v1.
+2026-03-13 15:25:50.793 +03:00 [INF] Executed endpoint 'HTTP: GET /index.html'
+2026-03-13 15:25:50.802 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 302 0 null 360.5897ms
+2026-03-13 15:25:50.821 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/v1 - null null
+2026-03-13 15:25:50.834 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:25:50.841 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 15:25:50.846 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:25:50.851 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/v1 - 200 705 text/html 30.6236ms
+2026-03-13 15:25:52.001 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:25:52.016 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:25:52.737 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:25:52.743 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:25:52.752 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 751.3806ms
+2026-03-13 15:25:52.766 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:25:52.866 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:25:52.878 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 134.2391ms
+2026-03-13 15:27:46.162 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 15:27:46.194 +03:00 [INF] Executing endpoint 'HTTP: GET /index.html'
+2026-03-13 15:27:46.200 +03:00 [INF] Executing RedirectResult, redirecting to /swagger/v1.
+2026-03-13 15:27:46.206 +03:00 [INF] Executed endpoint 'HTTP: GET /index.html'
+2026-03-13 15:27:46.214 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 302 0 null 52.7025ms
+2026-03-13 15:27:46.251 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/v1 - null null
+2026-03-13 15:27:46.264 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:27:46.268 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 15:27:46.275 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:27:46.284 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/v1 - 200 705 text/html 32.6005ms
+2026-03-13 15:27:47.396 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:27:47.406 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:27:47.465 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:27:47.468 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:27:47.469 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 72.803ms
+2026-03-13 15:27:47.477 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:27:47.601 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:27:47.608 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 140.0538ms
+2026-03-13 15:27:50.594 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/v1 - null null
+2026-03-13 15:27:50.824 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:27:50.862 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 15:27:50.868 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:27:50.878 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/v1 - 200 705 text/html 291.4498ms
+2026-03-13 15:27:51.273 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:27:51.283 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:27:51.373 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:27:51.375 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:27:51.376 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 103.5436ms
+2026-03-13 15:27:51.384 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:27:51.432 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:27:51.435 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 59.5577ms
+2026-03-13 15:27:54.223 +03:00 [INF] Application is shutting down...
+2026-03-13 15:28:15.155 +03:00 [INF] User profile is available. Using 'C:\Users\Meric\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 15:28:15.412 +03:00 [INF] Now listening on: http://localhost:5087
+2026-03-13 15:28:15.420 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 15:28:15.423 +03:00 [INF] Hosting environment: Development
+2026-03-13 15:28:15.427 +03:00 [INF] Content root path: C:\Users\Meric\Desktop\GigFlow\Presentation
+2026-03-13 15:28:20.170 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 15:28:20.221 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-03-13 15:28:20.273 +03:00 [INF] Executing endpoint 'HTTP: GET /index.html'
+2026-03-13 15:28:20.279 +03:00 [INF] Executing RedirectResult, redirecting to /swagger/v1.
+2026-03-13 15:28:20.283 +03:00 [INF] Executed endpoint 'HTTP: GET /index.html'
+2026-03-13 15:28:20.292 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 302 0 null 130.3872ms
+2026-03-13 15:28:20.310 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/v1 - null null
+2026-03-13 15:28:20.325 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:28:20.334 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 15:28:20.338 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:28:20.342 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/v1 - 200 705 text/html 33.375ms
+2026-03-13 15:28:21.515 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:28:21.530 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:28:22.148 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:28:22.152 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:28:22.156 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 640.3925ms
+2026-03-13 15:28:22.162 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:28:22.234 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:28:22.239 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 87.0376ms
+2026-03-13 15:28:30.998 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5087/api/Auth/register - application/json 89
+2026-03-13 15:28:31.007 +03:00 [INF] Executing endpoint 'GigFlow.Presentation.Controllers.AuthController.Register (Presentation)'
+2026-03-13 15:28:31.058 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(GigFlow.Application.Features.Users.Commands.CreateUser.CreateUserCommand) on controller GigFlow.Presentation.Controllers.AuthController (Presentation).
+2026-03-13 15:28:31.083 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-13 15:28:31.171 +03:00 [INF] Executing action method GigFlow.Presentation.Controllers.AuthController.Register (Presentation) - Validation state: "Valid"
+2026-03-13 15:28:31.330 +03:00 [INF] Executed action GigFlow.Presentation.Controllers.AuthController.Register (Presentation) in 254.8657ms
+2026-03-13 15:28:31.336 +03:00 [INF] Executed endpoint 'GigFlow.Presentation.Controllers.AuthController.Register (Presentation)'
+2026-03-13 15:28:31.342 +03:00 [WRN] Validation hatası oluştu.
+2026-03-13 15:28:31.354 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5087/api/Auth/register - 400 null application/json 356.6032ms
+2026-03-13 15:29:39.090 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5087/api/Auth/register - application/json 126
+2026-03-13 15:29:39.102 +03:00 [INF] Executing endpoint 'GigFlow.Presentation.Controllers.AuthController.Register (Presentation)'
+2026-03-13 15:29:39.110 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(GigFlow.Application.Features.Users.Commands.CreateUser.CreateUserCommand) on controller GigFlow.Presentation.Controllers.AuthController (Presentation).
+2026-03-13 15:29:39.120 +03:00 [INF] Executing action method GigFlow.Presentation.Controllers.AuthController.Register (Presentation) - Validation state: "Valid"
+2026-03-13 15:29:43.167 +03:00 [INF] Executed DbCommand (111ms) [Parameters=[@request_Email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreatedDate], [a].[Email], [a].[FirstName], [a].[IsActive], [a].[LastName], [a].[PasswordHash], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[UpdatedDate], [a].[UserType]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @request_Email
+2026-03-13 15:29:43.404 +03:00 [INF] Executed action GigFlow.Presentation.Controllers.AuthController.Register (Presentation) in 4285.5992ms
+2026-03-13 15:29:43.418 +03:00 [INF] Executed endpoint 'GigFlow.Presentation.Controllers.AuthController.Register (Presentation)'
+2026-03-13 15:29:43.424 +03:00 [ERR] Bir hata oluştu
+System.Exception: Bu e-posta adresi zaten kullanımda.
+   at GigFlow.Application.Features.Users.Commands.CreateUser.CreateUserCommandHandler.Handle(CreateUserCommand request, CancellationToken cancellationToken) in C:\Users\Meric\Desktop\GigFlow\Application\Features\Users\Commands\CreateUser\CreateUserCommandHandler.cs:line 31
+   at GigFlow.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\Meric\Desktop\GigFlow\Application\Behaviors\ValidationBehavior.cs:line 34
+   at GigFlow.Presentation.Controllers.AuthController.Register(CreateUserCommand command) in C:\Users\Meric\Desktop\GigFlow\Presentation\Controllers\AuthController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at GigFlow.Presentation.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Meric\Desktop\GigFlow\Presentation\Middleware\ExceptionMiddleware.cs:line 23
+2026-03-13 15:29:43.492 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5087/api/Auth/register - 500 null application/json 4402.1931ms
+2026-03-13 15:30:08.098 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5087/api/Auth/register - application/json 126
+2026-03-13 15:30:08.107 +03:00 [INF] Executing endpoint 'GigFlow.Presentation.Controllers.AuthController.Register (Presentation)'
+2026-03-13 15:30:08.110 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(GigFlow.Application.Features.Users.Commands.CreateUser.CreateUserCommand) on controller GigFlow.Presentation.Controllers.AuthController (Presentation).
+2026-03-13 15:30:08.118 +03:00 [INF] Executing action method GigFlow.Presentation.Controllers.AuthController.Register (Presentation) - Validation state: "Valid"
+2026-03-13 15:30:08.319 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@request_Email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreatedDate], [a].[Email], [a].[FirstName], [a].[IsActive], [a].[LastName], [a].[PasswordHash], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[UpdatedDate], [a].[UserType]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @request_Email
+2026-03-13 15:30:08.331 +03:00 [INF] Executed action GigFlow.Presentation.Controllers.AuthController.Register (Presentation) in 215.0582ms
+2026-03-13 15:30:08.338 +03:00 [INF] Executed endpoint 'GigFlow.Presentation.Controllers.AuthController.Register (Presentation)'
+2026-03-13 15:30:08.345 +03:00 [ERR] Bir hata oluştu
+System.Exception: Bu e-posta adresi zaten kullanımda.
+   at GigFlow.Application.Features.Users.Commands.CreateUser.CreateUserCommandHandler.Handle(CreateUserCommand request, CancellationToken cancellationToken) in C:\Users\Meric\Desktop\GigFlow\Application\Features\Users\Commands\CreateUser\CreateUserCommandHandler.cs:line 31
+   at GigFlow.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\Meric\Desktop\GigFlow\Application\Behaviors\ValidationBehavior.cs:line 34
+   at GigFlow.Presentation.Controllers.AuthController.Register(CreateUserCommand command) in C:\Users\Meric\Desktop\GigFlow\Presentation\Controllers\AuthController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at GigFlow.Presentation.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Meric\Desktop\GigFlow\Presentation\Middleware\ExceptionMiddleware.cs:line 23
+2026-03-13 15:30:08.387 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5087/api/Auth/register - 500 null application/json 289.4192ms
+2026-03-13 15:31:12.279 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5087/api/Auth/register - application/json 127
+2026-03-13 15:31:12.290 +03:00 [INF] Executing endpoint 'GigFlow.Presentation.Controllers.AuthController.Register (Presentation)'
+2026-03-13 15:31:12.295 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(GigFlow.Application.Features.Users.Commands.CreateUser.CreateUserCommand) on controller GigFlow.Presentation.Controllers.AuthController (Presentation).
+2026-03-13 15:31:12.306 +03:00 [INF] Executing action method GigFlow.Presentation.Controllers.AuthController.Register (Presentation) - Validation state: "Valid"
+2026-03-13 15:31:12.359 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@request_Email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreatedDate], [a].[Email], [a].[FirstName], [a].[IsActive], [a].[LastName], [a].[PasswordHash], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[UpdatedDate], [a].[UserType]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @request_Email
+2026-03-13 15:31:13.279 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 200), @p3='?' (Size = 100), @p4='?' (DbType = Boolean), @p5='?' (Size = 100), @p6='?' (Size = 4000), @p7='?' (Size = 500), @p8='?' (DbType = DateTime2), @p9='?' (DbType = DateTime2), @p10='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [CreatedDate], [Email], [FirstName], [IsActive], [LastName], [PasswordHash], [RefreshToken], [RefreshTokenExpiryTime], [UpdatedDate], [UserType])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+2026-03-13 15:31:13.482 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 200), @p2='?' (DbType = DateTime2), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Guid), @p6='?' (Size = 500)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ClientProfiles] ([Id], [CompanyName], [CreatedDate], [TotalSpent], [UpdatedDate], [UserId], [Website])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-03-13 15:31:13.514 +03:00 [INF] Executed action method GigFlow.Presentation.Controllers.AuthController.Register (Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1187.6887ms.
+2026-03-13 15:31:13.556 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.Guid, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-13 15:31:13.602 +03:00 [INF] Executed action GigFlow.Presentation.Controllers.AuthController.Register (Presentation) in 1296.5137ms
+2026-03-13 15:31:13.609 +03:00 [INF] Executed endpoint 'GigFlow.Presentation.Controllers.AuthController.Register (Presentation)'
+2026-03-13 15:31:13.615 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5087/api/Auth/register - 200 null application/json; charset=utf-8 1335.2895ms
+2026-03-13 15:31:49.082 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5087/api/Auth/login - application/json 60
+2026-03-13 15:31:49.091 +03:00 [INF] Executing endpoint 'GigFlow.Presentation.Controllers.AuthController.Login (Presentation)'
+2026-03-13 15:31:49.112 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(GigFlow.Application.Features.Users.Queries.Login.LoginQuery) on controller GigFlow.Presentation.Controllers.AuthController (Presentation).
+2026-03-13 15:31:49.128 +03:00 [INF] Executing action method GigFlow.Presentation.Controllers.AuthController.Login (Presentation) - Validation state: "Valid"
+2026-03-13 15:31:49.153 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@request_Email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreatedDate], [a].[Email], [a].[FirstName], [a].[IsActive], [a].[LastName], [a].[PasswordHash], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[UpdatedDate], [a].[UserType]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @request_Email
+2026-03-13 15:31:49.526 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (Size = 200), @p2='?' (Size = 100), @p3='?' (DbType = Boolean), @p4='?' (Size = 100), @p5='?' (Size = 4000), @p6='?' (Size = 500), @p7='?' (DbType = DateTime2), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AppUsers] SET [CreatedDate] = @p0, [Email] = @p1, [FirstName] = @p2, [IsActive] = @p3, [LastName] = @p4, [PasswordHash] = @p5, [RefreshToken] = @p6, [RefreshTokenExpiryTime] = @p7, [UpdatedDate] = @p8, [UserType] = @p9
+OUTPUT 1
+WHERE [Id] = @p10;
+2026-03-13 15:31:49.540 +03:00 [INF] Executed action method GigFlow.Presentation.Controllers.AuthController.Login (Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 404.5982ms.
+2026-03-13 15:31:49.549 +03:00 [INF] Executing OkObjectResult, writing value of type 'GigFlow.Application.Features.Users.Queries.Login.LoginResponse'.
+2026-03-13 15:31:49.565 +03:00 [INF] Executed action GigFlow.Presentation.Controllers.AuthController.Login (Presentation) in 441.6651ms
+2026-03-13 15:31:49.571 +03:00 [INF] Executed endpoint 'GigFlow.Presentation.Controllers.AuthController.Login (Presentation)'
+2026-03-13 15:31:49.576 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5087/api/Auth/login - 200 null application/json; charset=utf-8 493.9216ms
+2026-03-13 15:34:32.193 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/v1 - null null
+2026-03-13 15:34:32.207 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:34:32.212 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 15:34:32.216 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:34:32.221 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/v1 - 200 705 text/html 28.5031ms
+2026-03-13 15:34:33.046 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:34:33.061 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:34:33.113 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:34:33.119 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 73.3608ms
+2026-03-13 15:34:33.120 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:34:33.138 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:34:33.195 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:34:33.202 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 81.0312ms
+2026-03-13 15:38:30.404 +03:00 [INF] Application is shutting down...
+2026-03-13 15:43:54.858 +03:00 [INF] User profile is available. Using 'C:\Users\Meric\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 15:43:55.222 +03:00 [INF] Now listening on: http://localhost:5087
+2026-03-13 15:43:55.230 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 15:43:55.234 +03:00 [INF] Hosting environment: Development
+2026-03-13 15:43:55.236 +03:00 [INF] Content root path: C:\Users\Meric\Desktop\GigFlow\Presentation
+2026-03-13 15:43:58.280 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 15:43:58.341 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-03-13 15:43:58.497 +03:00 [INF] Executing endpoint 'HTTP: GET /index.html'
+2026-03-13 15:43:58.516 +03:00 [INF] Executing RedirectResult, redirecting to /swagger/v1.
+2026-03-13 15:43:58.535 +03:00 [INF] Executed endpoint 'HTTP: GET /index.html'
+2026-03-13 15:43:58.555 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 302 0 null 285.0392ms
+2026-03-13 15:43:58.621 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/v1 - null null
+2026-03-13 15:43:58.654 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:43:58.670 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 15:43:58.679 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:43:58.710 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/v1 - 200 705 text/html 90.6ms
+2026-03-13 15:43:59.688 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:43:59.705 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:44:00.300 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:44:00.304 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:44:00.310 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 621.5176ms
+2026-03-13 15:44:00.315 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:44:00.415 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:44:00.419 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 114.6446ms
+2026-03-13 15:44:26.395 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/v1 - null null
+2026-03-13 15:44:26.407 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:44:26.414 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 15:44:26.419 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/{documentName}'
+2026-03-13 15:44:26.423 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/v1 - 200 705 text/html 28.1214ms
+2026-03-13 15:44:26.770 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:44:26.784 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:44:26.899 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:44:26.903 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 15:44:26.904 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 133.9463ms
+2026-03-13 15:44:26.914 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:44:26.985 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 15:44:26.989 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 86.1046ms
+2026-03-13 15:44:52.812 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/api/Categories - null null
+2026-03-13 15:44:52.829 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-13 15:44:52.845 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-13 15:44:52.849 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/api/Categories - 401 0 null 37.0387ms
+2026-03-13 15:49:28.173 +03:00 [INF] Application is shutting down...
+2026-03-13 16:12:35.843 +03:00 [INF] User profile is available. Using 'C:\Users\Meric\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 16:12:36.165 +03:00 [INF] Now listening on: http://localhost:5087
+2026-03-13 16:12:36.173 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 16:12:36.178 +03:00 [INF] Hosting environment: Development
+2026-03-13 16:12:36.185 +03:00 [INF] Content root path: C:\Users\Meric\Desktop\GigFlow\Presentation
+2026-03-13 16:12:38.258 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 16:12:38.368 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-03-13 16:12:38.461 +03:00 [INF] Executing endpoint 'HTTP: GET /index.html'
+2026-03-13 16:12:38.467 +03:00 [INF] Executing RedirectResult, redirecting to /swagger/v1.
+2026-03-13 16:12:38.475 +03:00 [INF] Executed endpoint 'HTTP: GET /index.html'
+2026-03-13 16:12:38.484 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 302 0 null 243.9039ms
+2026-03-13 16:12:38.507 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/v1 - null null
+2026-03-13 16:12:38.527 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/v1 - 404 0 null 24.8051ms
+2026-03-13 16:12:38.550 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5087/swagger/v1, Response status code: 404
+2026-03-13 16:13:08.188 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/v1 - null null
+2026-03-13 16:13:08.214 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/v1 - 404 0 null 26.0497ms
+2026-03-13 16:13:08.234 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5087/swagger/v1, Response status code: 404
+2026-03-13 16:14:01.098 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/v1 - null null
+2026-03-13 16:14:01.110 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/v1 - 404 0 null 12.3702ms
+2026-03-13 16:14:01.145 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5087/swagger/v1, Response status code: 404
+2026-03-13 16:14:47.725 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/scalar/v1 - null null
+2026-03-13 16:14:47.737 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-13 16:14:48.079 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 16:14:48.084 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-13 16:14:48.089 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/scalar/v1 - 200 630 text/html 363.7222ms
+2026-03-13 16:14:48.139 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/scalar/scalar.aspnetcore.js - null null
+2026-03-13 16:14:48.155 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-13 16:14:48.170 +03:00 [INF] Sending file with download name ''.
+2026-03-13 16:14:48.180 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-13 16:14:48.184 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 44.8702ms
+2026-03-13 16:14:56.257 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/scalar/v1 - null null
+2026-03-13 16:14:56.266 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-13 16:14:56.274 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 16:14:56.279 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-13 16:14:56.285 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/scalar/v1 - 200 630 text/html 28.4288ms
+2026-03-13 16:14:56.329 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/scalar/scalar.aspnetcore.js - null null
+2026-03-13 16:14:56.336 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-13 16:14:56.342 +03:00 [INF] Sending file with download name ''.
+2026-03-13 16:14:56.346 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-13 16:14:56.350 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/scalar/scalar.aspnetcore.js - 304 null null 21.231ms
+2026-03-13 16:15:54.673 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/scalar/v1 - null null
+2026-03-13 16:15:54.683 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-13 16:15:54.693 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 16:15:54.697 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-13 16:15:54.701 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/scalar/v1 - 200 630 text/html 28.0855ms
+2026-03-13 16:15:54.751 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/scalar/scalar.aspnetcore.js - null null
+2026-03-13 16:15:54.769 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-13 16:15:54.778 +03:00 [INF] Sending file with download name ''.
+2026-03-13 16:15:54.781 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-13 16:15:54.785 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/scalar/scalar.aspnetcore.js - 304 null null 34.2747ms
+2026-03-13 16:15:57.838 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/scalar/v1 - null null
+2026-03-13 16:15:57.858 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-13 16:15:57.862 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 16:15:57.867 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-13 16:15:57.891 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/scalar/v1 - 200 630 text/html 54.656ms
+2026-03-13 16:15:57.923 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/scalar/scalar.aspnetcore.js - null null
+2026-03-13 16:15:57.942 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-13 16:15:57.948 +03:00 [INF] Sending file with download name ''.
+2026-03-13 16:15:57.953 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-13 16:15:57.962 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/scalar/scalar.aspnetcore.js - 304 null null 39.5992ms
+2026-03-13 16:16:48.968 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/scalar/v1 - null null
+2026-03-13 16:16:48.982 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-13 16:16:48.988 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 16:16:48.992 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-13 16:16:48.997 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/scalar/v1 - 200 630 text/html 28.9468ms
+2026-03-13 16:16:49.046 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/scalar/scalar.aspnetcore.js - null null
+2026-03-13 16:16:49.059 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-13 16:16:49.066 +03:00 [INF] Sending file with download name ''.
+2026-03-13 16:16:49.074 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-13 16:16:49.081 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/scalar/scalar.aspnetcore.js - 304 null null 34.8295ms
+2026-03-13 16:16:57.542 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 16:16:57.553 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 16:16:58.127 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 16:16:58.137 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 595.5106ms
+2026-03-13 16:17:23.447 +03:00 [INF] Application is shutting down...
+2026-03-13 16:22:21.762 +03:00 [INF] User profile is available. Using 'C:\Users\Meric\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 16:22:21.952 +03:00 [INF] Now listening on: http://localhost:5087
+2026-03-13 16:22:21.955 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 16:22:21.958 +03:00 [INF] Hosting environment: Development
+2026-03-13 16:22:21.960 +03:00 [INF] Content root path: C:\Users\Meric\Desktop\GigFlow\Presentation
+2026-03-13 16:22:33.339 +03:00 [INF] Application is shutting down...

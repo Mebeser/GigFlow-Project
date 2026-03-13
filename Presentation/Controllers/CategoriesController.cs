@@ -5,10 +5,12 @@ using GigFlow.Application.Features.Categories.Queries.GetCategoryList;
 using GigFlow.Application.Features.Categories.Queries.GetCategoryById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GigFlow.Presentation.Controllers;
 
 /// <summary>Kategori yönetimi işlemleri</summary>
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 [Produces("application/json")]

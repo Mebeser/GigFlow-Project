@@ -14,6 +14,8 @@ namespace GigFlow.Persistence
             services.AddDbContext<GigFlowDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("GigFlowConnectionString")));
 
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ISkillRepository, SkillRepository>();
             services.AddScoped<IJobPostingRepository, JobPostingRepository>();
@@ -23,6 +25,9 @@ namespace GigFlow.Persistence
             services.AddScoped<IMilestoneRepository, MilestoneRepository>();
             services.AddScoped<IReviewRepository, ReviewRepository>();
             services.AddScoped<IPortfolioRepository, PortfolioRepository>();
+            services.AddScoped<IAppUserRepository, AppUserRepository>();
+            services.AddScoped<IFreelancerProfileRepository, FreelancerProfileRepository>();
+            services.AddScoped<IClientProfileRepository, ClientProfileRepository>();
 
             return services;
         }

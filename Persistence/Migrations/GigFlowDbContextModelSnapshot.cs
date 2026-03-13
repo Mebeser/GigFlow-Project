@@ -17,10 +17,62 @@ namespace Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "10.0.3")
+                .HasAnnotation("ProductVersion", "10.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("GigFlow.Domain.Entities.AppUser", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RefreshToken")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime?>("RefreshTokenExpiryTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserType")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.ToTable("AppUsers");
+                });
 
             modelBuilder.Entity("GigFlow.Domain.Entities.Category", b =>
                 {
@@ -93,6 +145,40 @@ namespace Persistence.Migrations
                         });
                 });
 
+            modelBuilder.Entity("GigFlow.Domain.Entities.ClientProfile", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CompanyName")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("TotalSpent")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Website")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("ClientProfiles");
+                });
+
             modelBuilder.Entity("GigFlow.Domain.Entities.Contract", b =>
                 {
                     b.Property<Guid>("Id")
@@ -131,7 +217,68 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ClientId");
+
+                    b.HasIndex("FreelancerId");
+
                     b.ToTable("Contracts");
+                });
+
+            modelBuilder.Entity("GigFlow.Domain.Entities.FreelancerProfile", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("AverageRating")
+                        .HasColumnType("decimal(3,2)");
+
+                    b.Property<string>("Bio")
+                        .IsRequired()
+                        .HasMaxLength(3000)
+                        .HasColumnType("nvarchar(3000)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("HourlyRate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<decimal>("TotalEarnings")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("FreelancerProfiles");
+                });
+
+            modelBuilder.Entity("GigFlow.Domain.Entities.FreelancerSkill", b =>
+                {
+                    b.Property<Guid>("FreelancerProfileId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("SkillId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("FreelancerProfileId", "SkillId");
+
+                    b.HasIndex("SkillId");
+
+                    b.ToTable("FreelancerSkills");
                 });
 
             modelBuilder.Entity("GigFlow.Domain.Entities.JobPosting", b =>
@@ -186,6 +333,8 @@ namespace Persistence.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("ClientId");
 
                     b.ToTable("JobPostings");
 
@@ -377,6 +526,8 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("FreelancerId");
+
                     b.ToTable("Portfolios");
                 });
 
@@ -414,6 +565,8 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("FreelancerId");
+
                     b.HasIndex("JobPostingId");
 
                     b.ToTable("Proposals");
@@ -450,6 +603,10 @@ namespace Persistence.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ContractId");
+
+                    b.HasIndex("RevieweeId");
+
+                    b.HasIndex("ReviewerId");
 
                     b.ToTable("Reviews");
                 });
@@ -595,6 +752,66 @@ namespace Persistence.Migrations
                         .HasForeignKey("CategoryId");
                 });
 
+            modelBuilder.Entity("GigFlow.Domain.Entities.ClientProfile", b =>
+                {
+                    b.HasOne("GigFlow.Domain.Entities.AppUser", "User")
+                        .WithOne("ClientProfile")
+                        .HasForeignKey("GigFlow.Domain.Entities.ClientProfile", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("GigFlow.Domain.Entities.Contract", b =>
+                {
+                    b.HasOne("GigFlow.Domain.Entities.ClientProfile", "Client")
+                        .WithMany()
+                        .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("GigFlow.Domain.Entities.FreelancerProfile", "Freelancer")
+                        .WithMany()
+                        .HasForeignKey("FreelancerId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Client");
+
+                    b.Navigation("Freelancer");
+                });
+
+            modelBuilder.Entity("GigFlow.Domain.Entities.FreelancerProfile", b =>
+                {
+                    b.HasOne("GigFlow.Domain.Entities.AppUser", "User")
+                        .WithOne("FreelancerProfile")
+                        .HasForeignKey("GigFlow.Domain.Entities.FreelancerProfile", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("GigFlow.Domain.Entities.FreelancerSkill", b =>
+                {
+                    b.HasOne("GigFlow.Domain.Entities.FreelancerProfile", "FreelancerProfile")
+                        .WithMany("FreelancerSkills")
+                        .HasForeignKey("FreelancerProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GigFlow.Domain.Entities.Skill", "Skill")
+                        .WithMany("FreelancerSkills")
+                        .HasForeignKey("SkillId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FreelancerProfile");
+
+                    b.Navigation("Skill");
+                });
+
             modelBuilder.Entity("GigFlow.Domain.Entities.JobPosting", b =>
                 {
                     b.HasOne("GigFlow.Domain.Entities.Category", "Category")
@@ -603,7 +820,14 @@ namespace Persistence.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("GigFlow.Domain.Entities.ClientProfile", "Client")
+                        .WithMany("JobPostings")
+                        .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.Navigation("Category");
+
+                    b.Navigation("Client");
                 });
 
             modelBuilder.Entity("GigFlow.Domain.Entities.JobPostingSkill", b =>
@@ -636,13 +860,30 @@ namespace Persistence.Migrations
                     b.Navigation("Contract");
                 });
 
+            modelBuilder.Entity("GigFlow.Domain.Entities.Portfolio", b =>
+                {
+                    b.HasOne("GigFlow.Domain.Entities.FreelancerProfile", "FreelancerProfile")
+                        .WithMany("Portfolios")
+                        .HasForeignKey("FreelancerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FreelancerProfile");
+                });
+
             modelBuilder.Entity("GigFlow.Domain.Entities.Proposal", b =>
                 {
+                    b.HasOne("GigFlow.Domain.Entities.FreelancerProfile", "Freelancer")
+                        .WithMany()
+                        .HasForeignKey("FreelancerId");
+
                     b.HasOne("GigFlow.Domain.Entities.JobPosting", "JobPosting")
                         .WithMany("Proposals")
                         .HasForeignKey("JobPostingId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Freelancer");
 
                     b.Navigation("JobPosting");
                 });
@@ -655,7 +896,23 @@ namespace Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("GigFlow.Domain.Entities.AppUser", "Reviewee")
+                        .WithMany()
+                        .HasForeignKey("RevieweeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("GigFlow.Domain.Entities.AppUser", "Reviewer")
+                        .WithMany()
+                        .HasForeignKey("ReviewerId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.Navigation("Contract");
+
+                    b.Navigation("Reviewee");
+
+                    b.Navigation("Reviewer");
                 });
 
             modelBuilder.Entity("GigFlow.Domain.Entities.Skill", b =>
@@ -669,6 +926,13 @@ namespace Persistence.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("GigFlow.Domain.Entities.AppUser", b =>
+                {
+                    b.Navigation("ClientProfile");
+
+                    b.Navigation("FreelancerProfile");
+                });
+
             modelBuilder.Entity("GigFlow.Domain.Entities.Category", b =>
                 {
                     b.Navigation("JobPostings");
@@ -678,11 +942,23 @@ namespace Persistence.Migrations
                     b.Navigation("SubCategories");
                 });
 
+            modelBuilder.Entity("GigFlow.Domain.Entities.ClientProfile", b =>
+                {
+                    b.Navigation("JobPostings");
+                });
+
             modelBuilder.Entity("GigFlow.Domain.Entities.Contract", b =>
                 {
                     b.Navigation("Milestones");
 
                     b.Navigation("Reviews");
+                });
+
+            modelBuilder.Entity("GigFlow.Domain.Entities.FreelancerProfile", b =>
+                {
+                    b.Navigation("FreelancerSkills");
+
+                    b.Navigation("Portfolios");
                 });
 
             modelBuilder.Entity("GigFlow.Domain.Entities.JobPosting", b =>
@@ -694,6 +970,8 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("GigFlow.Domain.Entities.Skill", b =>
                 {
+                    b.Navigation("FreelancerSkills");
+
                     b.Navigation("JobPostingSkills");
                 });
 #pragma warning restore 612, 618

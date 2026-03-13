@@ -9,31 +9,33 @@ public class CreateReviewCommandHandler : IRequestHandler<CreateReviewCommand, G
 {
     private readonly IReviewRepository _reviewRepository;
     private readonly IContractRepository _contractRepository;
+    private readonly IFreelancerProfileRepository _freelancerProfileRepository;
 
     public CreateReviewCommandHandler(
         IReviewRepository reviewRepository,
-        IContractRepository contractRepository)
+        IContractRepository contractRepository,
+        IFreelancerProfileRepository freelancerProfileRepository)
     {
         _reviewRepository = reviewRepository;
         _contractRepository = contractRepository;
+        _freelancerProfileRepository = freelancerProfileRepository;
     }
 
     public async Task<Guid> Handle(CreateReviewCommand request, CancellationToken cancellationToken)
     {
-        // Kritik kural: Sadece Completed sözleşmeler için review yapılabilir
         var contract = await _contractRepository.GetByIdAsync(request.ContractId);
-        if (contract == null)
-            throw new Exception("Contract not found.");
+        if (contract == null || contract.Status != ContractStatus.Completed)
+        {
+            throw new Exception("Yalnızca tamamlanmış işler için değerlendirme yapılabilir.");
+        }
 
-        if (contract.Status != ContractStatus.Completed)
-            throw new Exception("Reviews can only be created for completed contracts.");
-
-        // Kritik kural: Aynı kişi aynı sözleşme için birden fazla review yapamaz
         var existingReviews = await _reviewRepository.GetAllAsync(r =>
             r.ContractId == request.ContractId && r.ReviewerId == request.ReviewerId);
 
         if (existingReviews.Any())
-            throw new Exception("You have already submitted a review for this contract.");
+        {
+            throw new Exception("Bu iş için zaten bir değerlendirme yapılmış.");
+        }
 
         var review = new Review
         {
@@ -47,6 +49,22 @@ public class CreateReviewCommandHandler : IRequestHandler<CreateReviewCommand, G
         };
 
         await _reviewRepository.AddAsync(review);
+
+        // Ortalama puanı tekrar hesaplıyoruz
+        var allReviews = await _reviewRepository.GetAllAsync(r => r.RevieweeId == request.RevieweeId);
+        if (allReviews.Any())
+        {
+            var average = (decimal)allReviews.Average(r => r.Rating);
+            var profiles = await _freelancerProfileRepository.GetAllAsync(p => p.UserId == request.RevieweeId);
+            var profile = profiles.FirstOrDefault();
+            
+            if (profile != null)
+            {
+                profile.AverageRating = average;
+                await _freelancerProfileRepository.UpdateAsync(profile);
+            }
+        }
+
         return review.Id;
     }
 }

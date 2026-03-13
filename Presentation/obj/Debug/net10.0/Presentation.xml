@@ -44,15 +44,16 @@
             <param name="clientId">Müşteri ID'si</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.ContractsController.UpdateStatus(System.Guid,GigFlow.Application.Features.Contracts.Commands.UpdateContractStatus.UpdateContractStatusCommand)">
-            <summary>Sözleşme durumunu günceller. İptal edilmiş sözleşmeler güncellenemez.</summary>
-            <param name="id">Güncellenecek sözleşme ID'si</param>
+            <summary>Sözleşme durumunu günceller</summary>
+            <param name="id">Sözleşme ID'si</param>
+            <param name="command">Yeni durum bilgileri</param>
         </member>
         <member name="T:GigFlow.Presentation.Controllers.JobPostingsController">
             <summary>İş ilanı yönetimi işlemleri</summary>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.JobPostingsController.GetAll(GigFlow.Application.Features.JobPostings.Queries.GetAllJobPostings.GetAllJobPostingsQuery)">
-            <summary>İş ilanlarını filtre ve sayfalama ile listeler</summary>
-            <param name="query">Filtreleme ve sayfalama parametreleri (SearchTerm, CategoryId, PageNumber, PageSize)</param>
+            <summary>İş ilanlarını filtreleyerek listeler</summary>
+            <param name="query">Arama ve sayfalama kriterleri</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.JobPostingsController.GetById(System.Guid)">
             <summary>Belirtilen ID'ye sahip iş ilanını getirir</summary>
@@ -63,11 +64,12 @@
             <param name="categoryId">Kategori ID'si</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.JobPostingsController.Create(GigFlow.Application.Features.JobPostings.Commands.CreateJobPosting.CreateJobPostingCommand)">
-            <summary>Yeni iş ilanı oluşturur. BudgetMax >= BudgetMin ve 1-10 arası skill zorunludur.</summary>
+            <summary>Yeni iş ilanı oluşturur</summary>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.JobPostingsController.Update(System.Guid,GigFlow.Application.Features.JobPostings.Commands.UpdateJobPosting.UpdateJobPostingCommand)">
-            <summary>Mevcut iş ilanını günceller. Tamamlanmış ilanlar güncellenemez.</summary>
-            <param name="id">Güncellenecek ilan ID'si</param>
+            <summary>İş ilanını günceller</summary>
+            <param name="id">İlan ID'si</param>
+            <param name="command">Güncel ilan bilgileri</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.JobPostingsController.Delete(System.Guid)">
             <summary>İş ilanını siler</summary>
@@ -81,11 +83,13 @@
             <param name="contractId">Sözleşme ID'si</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.MilestonesController.Create(GigFlow.Application.Features.Milestones.Commands.CreateMilestone.CreateMilestoneCommand)">
-            <summary>Sözleşmeye yeni hakediş ekler. Toplam tutar sözleşme tutarını geçemez.</summary>
+            <summary>Sözleşmeye yeni hakediş ekler</summary>
+            <param name="command">Hakediş detayları</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.MilestonesController.UpdateStatus(System.Guid,GigFlow.Application.Features.Milestones.Commands.UpdateMilestoneStatus.UpdateMilestoneStatusCommand)">
-            <summary>Hakediş durumunu günceller. Tüm hakedişler Approved olursa sözleşme otomatik kapanır.</summary>
-            <param name="id">Güncellenecek hakediş ID'si</param>
+            <summary>Hakediş durumunu günceller</summary>
+            <param name="id">Hakediş ID'si</param>
+            <param name="command">Yeni durum bilgileri</param>
         </member>
         <member name="T:GigFlow.Presentation.Controllers.ProposalsController">
             <summary>Teklif (Proposal) yönetimi işlemleri</summary>
@@ -99,23 +103,25 @@
             <param name="id">Teklif ID'si</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.ProposalsController.Create(GigFlow.Application.Features.Proposals.Commands.CreateProposal.CreateProposalCommand)">
-            <summary>Yeni teklif oluşturur. ProposedAmount > 0 ve geçerli bir iş ilanı zorunludur.</summary>
+            <summary>Yeni bir teklif oluşturur</summary>
+            <param name="command">Teklif detayları</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.ProposalsController.Update(System.Guid,GigFlow.Application.Features.Proposals.Commands.UpdateProposal.UpdateProposalCommand)">
-            <summary>Beklemedeki teklifi günceller. Yalnızca Pending durumundaki teklifler güncellenebilir.</summary>
-            <param name="id">Güncellenecek teklif ID'si</param>
+            <summary>Teklifi günceller</summary>
+            <param name="id">Teklif ID'si</param>
+            <param name="command">Güncel teklif bilgileri</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.ProposalsController.Withdraw(System.Guid)">
-            <summary>Teklifi geri çeker. Kabul edilmiş teklifler geri çekilemez.</summary>
-            <param name="id">Geri çekilecek teklif ID'si</param>
+            <summary>Teklifi geri çeker</summary>
+            <param name="id">Teklif ID'si</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.ProposalsController.Accept(System.Guid)">
-            <summary>Teklifi kabul eder. Diğer tüm Pending teklifler otomatik olarak Rejected olur. Sözleşme otomatik oluşturulur.</summary>
-            <param name="id">Kabul edilecek teklif ID'si</param>
+            <summary>Teklifi kabul eder</summary>
+            <param name="id">Teklif ID'si</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.ProposalsController.Reject(System.Guid)">
-            <summary>Teklifi reddeder. Yalnızca Pending durumundaki teklifler reddedilebilir.</summary>
-            <param name="id">Reddedilecek teklif ID'si</param>
+            <summary>Teklifi reddeder</summary>
+            <param name="id">Teklif ID'si</param>
         </member>
         <member name="T:GigFlow.Presentation.Controllers.ReviewsController">
             <summary>Değerlendirme (Review) yönetimi işlemleri</summary>
@@ -147,10 +153,12 @@
         </member>
         <member name="M:GigFlow.Presentation.Controllers.SkillsController.Create(GigFlow.Application.Features.Skills.Commands.CreateSkill.CreateSkillCommand)">
             <summary>Yeni yetenek oluşturur</summary>
+            <param name="command">Yetenek bilgileri</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.SkillsController.Update(System.Guid,GigFlow.Application.Features.Skills.Commands.UpdateSkill.UpdateSkillCommand)">
             <summary>Mevcut yeteneği günceller</summary>
-            <param name="id">Güncellenecek yetenek ID'si</param>
+            <param name="id">Yetenek ID'si</param>
+            <param name="command">Güncel yetenek bilgileri</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.SkillsController.Delete(System.Guid)">
             <summary>Yeteneği siler</summary>

@@ -21,6 +21,7 @@ namespace GigFlow.Domain.Entities
         public JobStatus Status { get; set; }
         
         public Guid? ClientId { get; set; }
+        public virtual ClientProfile? Client { get; set; }
         public DateTime? Deadline { get; set; }
         
         public ICollection<JobPostingSkill> JobPostingSkills { get; set; } = new List<JobPostingSkill>();

@@ -26,7 +26,7 @@ public class ReviewsController : ControllerBase
         return Ok(result);
     }
 
-    /// <summary>Bir kullanıcı hakkında yapılan değerlendirmeleri listeler (reviewee)</summary>
+    /// <summary>Bir kullanıcı hakkında yapılan değerlendirmeleri listeler </summary>
     /// <param name="userId">Değerlendirilen kullanıcı ID'si</param>
     [HttpGet("by-user/{userId:guid}")]
     [ProducesResponseType(StatusCodes.Status200OK)]

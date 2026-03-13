@@ -24,6 +24,16 @@ namespace GigFlow.Persistence.Configurations
                 .WithOne(r => r.Contract)
                 .HasForeignKey(r => r.ContractId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasOne(c => c.Freelancer)
+                .WithMany()
+                .HasForeignKey(c => c.FreelancerId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(c => c.Client)
+                .WithMany()
+                .HasForeignKey(c => c.ClientId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

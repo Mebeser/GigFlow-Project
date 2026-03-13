@@ -26,7 +26,8 @@ public class MilestonesController : ControllerBase
         return Ok(result);
     }
 
-    /// <summary>Sözleşmeye yeni hakediş ekler. Toplam tutar sözleşme tutarını geçemez.</summary>
+    /// <summary>Sözleşmeye yeni hakediş ekler</summary>
+    /// <param name="command">Hakediş detayları</param>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -36,8 +37,9 @@ public class MilestonesController : ControllerBase
         return Created($"/api/milestones/{id}", id);
     }
 
-    /// <summary>Hakediş durumunu günceller. Tüm hakedişler Approved olursa sözleşme otomatik kapanır.</summary>
-    /// <param name="id">Güncellenecek hakediş ID'si</param>
+    /// <summary>Hakediş durumunu günceller</summary>
+    /// <param name="id">Hakediş ID'si</param>
+    /// <param name="command">Yeni durum bilgileri</param>
     [HttpPatch("{id:guid}/status")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

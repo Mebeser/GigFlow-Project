@@ -14,11 +14,14 @@ namespace GigFlow.Presentation.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 [Produces("application/json")]
+[Microsoft.AspNetCore.Authorization.Authorize]
 public class ProposalsController : ControllerBase
 {
     private readonly IMediator _mediator;
 
     public ProposalsController(IMediator mediator) => _mediator = mediator;
+
+    private Guid GetUserId() => Guid.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value!);
 
     /// <summary>Belirli bir iş ilanına ait tüm teklifleri listeler</summary>
     /// <param name="jobPostingId">İş ilanı ID'si</param>
@@ -42,7 +45,8 @@ public class ProposalsController : ControllerBase
         return Ok(result);
     }
 
-    /// <summary>Yeni teklif oluşturur. ProposedAmount > 0 ve geçerli bir iş ilanı zorunludur.</summary>
+    /// <summary>Yeni bir teklif oluşturur</summary>
+    /// <param name="command">Teklif detayları</param>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -52,21 +56,27 @@ public class ProposalsController : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id }, id);
     }
 
-    /// <summary>Beklemedeki teklifi günceller. Yalnızca Pending durumundaki teklifler güncellenebilir.</summary>
-    /// <param name="id">Güncellenecek teklif ID'si</param>
+    /// <summary>Teklifi günceller</summary>
+    /// <param name="id">Teklif ID'si</param>
+    /// <param name="command">Güncel teklif bilgileri</param>
     [HttpPut("{id:guid}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Update(Guid id, [FromBody] UpdateProposalCommand command)
     {
+        var proposal = await _mediator.Send(new GetProposalByIdQuery { Id = id });
+        if (proposal == null) return NotFound();
+        
+        // Burada teklif sahibi kontrolü yapılacak
+        
         command.Id = id;
         await _mediator.Send(command);
         return NoContent();
     }
 
-    /// <summary>Teklifi geri çeker. Kabul edilmiş teklifler geri çekilemez.</summary>
-    /// <param name="id">Geri çekilecek teklif ID'si</param>
+    /// <summary>Teklifi geri çeker</summary>
+    /// <param name="id">Teklif ID'si</param>
     [HttpPatch("{id:guid}/withdraw")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -77,8 +87,8 @@ public class ProposalsController : ControllerBase
         return NoContent();
     }
 
-    /// <summary>Teklifi kabul eder. Diğer tüm Pending teklifler otomatik olarak Rejected olur. Sözleşme otomatik oluşturulur.</summary>
-    /// <param name="id">Kabul edilecek teklif ID'si</param>
+    /// <summary>Teklifi kabul eder</summary>
+    /// <param name="id">Teklif ID'si</param>
     [HttpPatch("{id:guid}/accept")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -89,8 +99,8 @@ public class ProposalsController : ControllerBase
         return NoContent();
     }
 
-    /// <summary>Teklifi reddeder. Yalnızca Pending durumundaki teklifler reddedilebilir.</summary>
-    /// <param name="id">Reddedilecek teklif ID'si</param>
+    /// <summary>Teklifi reddeder</summary>
+    /// <param name="id">Teklif ID'si</param>
     [HttpPatch("{id:guid}/reject")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

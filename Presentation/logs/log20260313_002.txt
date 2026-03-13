@@ -1,0 +1,88 @@
+2026-03-13 16:29:44.246 +03:00 [INF] User profile is available. Using 'C:\Users\Meric\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 16:29:44.432 +03:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5087: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Normal olarak her yuva adresi (iletişim kuralı/ağ adresi/bağlantı noktası) için yalnızca bir kullanıma izin veriliyor.
+ ---> System.Net.Sockets.SocketException (10048): Normal olarak her yuva adresi (iletişim kuralı/ağ adresi/bağlantı noktası) için yalnızca bir kullanıma izin veriliyor.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-03-13 16:56:05.736 +03:00 [INF] User profile is available. Using 'C:\Users\Meric\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 16:56:07.220 +03:00 [INF] Now listening on: http://localhost:5087
+2026-03-13 16:56:07.233 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 16:56:07.237 +03:00 [INF] Hosting environment: Development
+2026-03-13 16:56:07.244 +03:00 [INF] Content root path: C:\Users\Meric\Desktop\GigFlow\Presentation
+2026-03-13 16:56:27.108 +03:00 [INF] Application is shutting down...
+2026-03-13 16:58:04.269 +03:00 [INF] User profile is available. Using 'C:\Users\Meric\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 16:58:04.754 +03:00 [INF] Now listening on: http://localhost:5087
+2026-03-13 16:58:04.760 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 16:58:04.764 +03:00 [INF] Hosting environment: Development
+2026-03-13 16:58:04.767 +03:00 [INF] Content root path: C:\Users\Meric\Desktop\GigFlow\Presentation
+2026-03-13 16:58:09.079 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/index.html - null null
+2026-03-13 16:58:09.212 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-03-13 16:58:09.700 +03:00 [INF] Executing endpoint 'HTTP: GET /index.html'
+2026-03-13 16:58:09.780 +03:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2026-03-13 16:58:09.787 +03:00 [INF] Executed endpoint 'HTTP: GET /index.html'
+2026-03-13 16:58:09.815 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/index.html - 302 0 null 754.8308ms
+2026-03-13 16:58:09.849 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger - null null
+2026-03-13 16:58:09.881 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/{documentName?}'
+2026-03-13 16:58:09.893 +03:00 [INF] Executing RedirectResult, redirecting to swagger/.
+2026-03-13 16:58:09.898 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/{documentName?}'
+2026-03-13 16:58:09.902 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger - 302 0 null 54.5529ms
+2026-03-13 16:58:09.916 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/ - null null
+2026-03-13 16:58:09.928 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/{documentName?}'
+2026-03-13 16:58:10.592 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 16:58:10.601 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/{documentName?}'
+2026-03-13 16:58:10.612 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/ - 200 629 text/html 695.7625ms
+2026-03-13 16:58:10.655 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/scalar.aspnetcore.js - null null
+2026-03-13 16:58:10.663 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/scalar.aspnetcore.js'
+2026-03-13 16:58:10.677 +03:00 [INF] Sending file with download name ''.
+2026-03-13 16:58:10.688 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/scalar.aspnetcore.js'
+2026-03-13 16:58:10.691 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/scalar.aspnetcore.js - 200 1111 text/javascript 36.8463ms
+2026-03-13 16:58:16.844 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/ - null null
+2026-03-13 16:58:16.858 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/{documentName?}'
+2026-03-13 16:58:16.866 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-13 16:58:16.877 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/{documentName?}'
+2026-03-13 16:58:16.891 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/ - 200 629 text/html 46.594ms
+2026-03-13 16:58:16.967 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/scalar.js - null null
+2026-03-13 16:58:16.983 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/scalar.js'
+2026-03-13 16:58:16.988 +03:00 [INF] Sending file with download name ''.
+2026-03-13 16:58:16.991 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/scalar.aspnetcore.js - null null
+2026-03-13 16:58:17.004 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/scalar.aspnetcore.js'
+2026-03-13 16:58:17.064 +03:00 [INF] Sending file with download name ''.
+2026-03-13 16:58:17.066 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/scalar.js'
+2026-03-13 16:58:17.091 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/scalar.aspnetcore.js'
+2026-03-13 16:58:17.106 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/scalar.js - 200 998407 text/javascript 139.1037ms
+2026-03-13 16:58:17.110 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/scalar.aspnetcore.js - 200 1111 text/javascript 119.0594ms
+2026-03-13 16:58:19.159 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/openapi/v1.json - null null
+2026-03-13 16:58:19.194 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 16:58:19.431 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/favicon.svg - null null
+2026-03-13 16:58:19.439 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/favicon.svg'
+2026-03-13 16:58:19.445 +03:00 [INF] Sending file with download name ''.
+2026-03-13 16:58:19.463 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/favicon.svg'
+2026-03-13 16:58:19.470 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/favicon.svg - 200 533 image/svg+xml 38.5608ms
+2026-03-13 16:58:20.237 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-13 16:58:20.243 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/openapi/v1.json - 200 null application/json;charset=utf-8 1084.634ms
+2026-03-13 16:58:20.461 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5087/swagger/favicon.svg - null null
+2026-03-13 16:58:20.733 +03:00 [INF] Executing endpoint 'HTTP: GET /swagger/favicon.svg'
+2026-03-13 16:58:20.740 +03:00 [INF] Sending file with download name ''.
+2026-03-13 16:58:20.748 +03:00 [INF] Executed endpoint 'HTTP: GET /swagger/favicon.svg'
+2026-03-13 16:58:20.762 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5087/swagger/favicon.svg - 304 null null 301.3027ms
+2026-03-13 16:58:57.239 +03:00 [INF] Application is shutting down...

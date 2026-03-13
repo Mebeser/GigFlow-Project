@@ -11,5 +11,6 @@ namespace GigFlow.Domain.Entities
         public Category Category { get; set; } = null!;
         
         public ICollection<JobPostingSkill> JobPostingSkills { get; set; } = new List<JobPostingSkill>();
+        public virtual ICollection<FreelancerSkill> FreelancerSkills { get; set; } = new List<FreelancerSkill>();
     }
 }

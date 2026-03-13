@@ -51,6 +51,7 @@ public class SkillsController : ControllerBase
     }
 
     /// <summary>Yeni yetenek oluşturur</summary>
+    /// <param name="command">Yetenek bilgileri</param>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -61,7 +62,8 @@ public class SkillsController : ControllerBase
     }
 
     /// <summary>Mevcut yeteneği günceller</summary>
-    /// <param name="id">Güncellenecek yetenek ID'si</param>
+    /// <param name="id">Yetenek ID'si</param>
+    /// <param name="command">Güncel yetenek bilgileri</param>
     [HttpPut("{id:guid}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
