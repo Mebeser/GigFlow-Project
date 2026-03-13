@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Presentation</name>
+    </assembly>
+    <members>
+        <member name="T:GigFlow.Presentation.Controllers.CategoriesController">
+            <summary>Kategori yönetimi işlemleri</summary>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.CategoriesController.GetAll">
+            <summary>Tüm kategorileri listeler</summary>
+            <returns>Kategori listesi</returns>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.CategoriesController.GetById(System.Guid)">
+            <summary>Belirtilen ID'ye sahip kategoriyi getirir</summary>
+            <param name="id">Kategori ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.CategoriesController.Create(GigFlow.Application.Features.Categories.Commands.CreateCategory.CreateCategoryCommand)">
+            <summary>Yeni kategori oluşturur</summary>
+            <param name="command">Kategori bilgileri</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.CategoriesController.Update(System.Guid,GigFlow.Application.Features.Categories.Commands.UpdateCategory.UpdateCategoryCommand)">
+            <summary>Mevcut kategoriyi günceller</summary>
+            <param name="id">Güncellenecek kategori ID'si</param>
+            <param name="command">Yeni kategori bilgileri</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.CategoriesController.Delete(System.Guid)">
+            <summary>Kategoriyi siler</summary>
+            <param name="id">Silinecek kategori ID'si</param>
+        </member>
+        <member name="T:GigFlow.Presentation.Controllers.ContractsController">
+            <summary>Sözleşme (Contract) yönetimi işlemleri</summary>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ContractsController.GetById(System.Guid)">
+            <summary>Belirtilen ID'ye sahip sözleşmeyi getirir</summary>
+            <param name="id">Sözleşme ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ContractsController.GetByFreelancer(System.Guid)">
+            <summary>Belirli bir freelancer'a ait sözleşmeleri listeler</summary>
+            <param name="freelancerId">Freelancer ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ContractsController.GetByClient(System.Guid)">
+            <summary>Belirli bir müşteriye (client) ait sözleşmeleri listeler</summary>
+            <param name="clientId">Müşteri ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ContractsController.UpdateStatus(System.Guid,GigFlow.Application.Features.Contracts.Commands.UpdateContractStatus.UpdateContractStatusCommand)">
+            <summary>Sözleşme durumunu günceller. İptal edilmiş sözleşmeler güncellenemez.</summary>
+            <param name="id">Güncellenecek sözleşme ID'si</param>
+        </member>
+        <member name="T:GigFlow.Presentation.Controllers.JobPostingsController">
+            <summary>İş ilanı yönetimi işlemleri</summary>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.JobPostingsController.GetAll(GigFlow.Application.Features.JobPostings.Queries.GetAllJobPostings.GetAllJobPostingsQuery)">
+            <summary>İş ilanlarını filtre ve sayfalama ile listeler</summary>
+            <param name="query">Filtreleme ve sayfalama parametreleri (SearchTerm, CategoryId, PageNumber, PageSize)</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.JobPostingsController.GetById(System.Guid)">
+            <summary>Belirtilen ID'ye sahip iş ilanını getirir</summary>
+            <param name="id">İlan ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.JobPostingsController.GetByCategory(System.Guid)">
+            <summary>Belirli bir kategoriye ait iş ilanlarını listeler</summary>
+            <param name="categoryId">Kategori ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.JobPostingsController.Create(GigFlow.Application.Features.JobPostings.Commands.CreateJobPosting.CreateJobPostingCommand)">
+            <summary>Yeni iş ilanı oluşturur. BudgetMax >= BudgetMin ve 1-10 arası skill zorunludur.</summary>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.JobPostingsController.Update(System.Guid,GigFlow.Application.Features.JobPostings.Commands.UpdateJobPosting.UpdateJobPostingCommand)">
+            <summary>Mevcut iş ilanını günceller. Tamamlanmış ilanlar güncellenemez.</summary>
+            <param name="id">Güncellenecek ilan ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.JobPostingsController.Delete(System.Guid)">
+            <summary>İş ilanını siler</summary>
+            <param name="id">Silinecek ilan ID'si</param>
+        </member>
+        <member name="T:GigFlow.Presentation.Controllers.MilestonesController">
+            <summary>Hakediş (Milestone) yönetimi işlemleri</summary>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.MilestonesController.GetByContract(System.Guid)">
+            <summary>Bir sözleşmeye ait tüm hakedişleri listeler</summary>
+            <param name="contractId">Sözleşme ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.MilestonesController.Create(GigFlow.Application.Features.Milestones.Commands.CreateMilestone.CreateMilestoneCommand)">
+            <summary>Sözleşmeye yeni hakediş ekler. Toplam tutar sözleşme tutarını geçemez.</summary>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.MilestonesController.UpdateStatus(System.Guid,GigFlow.Application.Features.Milestones.Commands.UpdateMilestoneStatus.UpdateMilestoneStatusCommand)">
+            <summary>Hakediş durumunu günceller. Tüm hakedişler Approved olursa sözleşme otomatik kapanır.</summary>
+            <param name="id">Güncellenecek hakediş ID'si</param>
+        </member>
+        <member name="T:GigFlow.Presentation.Controllers.ProposalsController">
+            <summary>Teklif (Proposal) yönetimi işlemleri</summary>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ProposalsController.GetByJobPosting(System.Guid)">
+            <summary>Belirli bir iş ilanına ait tüm teklifleri listeler</summary>
+            <param name="jobPostingId">İş ilanı ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ProposalsController.GetById(System.Guid)">
+            <summary>Belirtilen ID'ye sahip teklifi getirir</summary>
+            <param name="id">Teklif ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ProposalsController.Create(GigFlow.Application.Features.Proposals.Commands.CreateProposal.CreateProposalCommand)">
+            <summary>Yeni teklif oluşturur. ProposedAmount > 0 ve geçerli bir iş ilanı zorunludur.</summary>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ProposalsController.Update(System.Guid,GigFlow.Application.Features.Proposals.Commands.UpdateProposal.UpdateProposalCommand)">
+            <summary>Beklemedeki teklifi günceller. Yalnızca Pending durumundaki teklifler güncellenebilir.</summary>
+            <param name="id">Güncellenecek teklif ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ProposalsController.Withdraw(System.Guid)">
+            <summary>Teklifi geri çeker. Kabul edilmiş teklifler geri çekilemez.</summary>
+            <param name="id">Geri çekilecek teklif ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ProposalsController.Accept(System.Guid)">
+            <summary>Teklifi kabul eder. Diğer tüm Pending teklifler otomatik olarak Rejected olur. Sözleşme otomatik oluşturulur.</summary>
+            <param name="id">Kabul edilecek teklif ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ProposalsController.Reject(System.Guid)">
+            <summary>Teklifi reddeder. Yalnızca Pending durumundaki teklifler reddedilebilir.</summary>
+            <param name="id">Reddedilecek teklif ID'si</param>
+        </member>
+        <member name="T:GigFlow.Presentation.Controllers.ReviewsController">
+            <summary>Değerlendirme (Review) yönetimi işlemleri</summary>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ReviewsController.GetByContract(System.Guid)">
+            <summary>Bir sözleşmeye ait tüm değerlendirmeleri listeler</summary>
+            <param name="contractId">Sözleşme ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ReviewsController.GetByUser(System.Guid)">
+            <summary>Bir kullanıcı hakkında yapılan değerlendirmeleri listeler (reviewee)</summary>
+            <param name="userId">Değerlendirilen kullanıcı ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.ReviewsController.Create(GigFlow.Application.Features.Reviews.Commands.CreateReview.CreateReviewCommand)">
+            <summary>Yeni değerlendirme oluşturur. Yalnızca Completed sözleşmeler için ve aynı kişi tekrar değerlendirme yapamaz.</summary>
+        </member>
+        <member name="T:GigFlow.Presentation.Controllers.SkillsController">
+            <summary>Yetenek (Skill) yönetimi işlemleri</summary>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.SkillsController.GetAll">
+            <summary>Tüm yetenekleri listeler</summary>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.SkillsController.GetById(System.Guid)">
+            <summary>Belirtilen ID'ye sahip yeteneği getirir</summary>
+            <param name="id">Yetenek ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.SkillsController.GetByCategory(System.Guid)">
+            <summary>Belirli bir kategoriye ait yetenekleri listeler</summary>
+            <param name="categoryId">Kategori ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.SkillsController.Create(GigFlow.Application.Features.Skills.Commands.CreateSkill.CreateSkillCommand)">
+            <summary>Yeni yetenek oluşturur</summary>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.SkillsController.Update(System.Guid,GigFlow.Application.Features.Skills.Commands.UpdateSkill.UpdateSkillCommand)">
+            <summary>Mevcut yeteneği günceller</summary>
+            <param name="id">Güncellenecek yetenek ID'si</param>
+        </member>
+        <member name="M:GigFlow.Presentation.Controllers.SkillsController.Delete(System.Guid)">
+            <summary>Yeteneği siler</summary>
+            <param name="id">Silinecek yetenek ID'si</param>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type)">
+            <summary>
+            Generates a documentation comment ID for a type.
+            Example: T:Namespace.Outer+Inner`1 becomes T:Namespace.Outer.Inner`1
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.PropertyInfo)">
+            <summary>
+            Generates a documentation comment ID for a property.
+            Example: P:Namespace.ContainingType.PropertyName or for an indexer P:Namespace.ContainingType.Item(System.Int32)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type,System.String)">
+            <summary>
+            Generates a documentation comment ID for a property given its container type and property name.
+            Example: P:Namespace.ContainingType.PropertyName
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.MethodInfo)">
+            <summary>
+            Generates a documentation comment ID for a method (or constructor).
+            For example:
+              M:Namespace.ContainingType.MethodName(ParamType1,ParamType2)~ReturnType
+              M:Namespace.ContainingType.#ctor(ParamType)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.GetTypeDocId(System.Type,System.Boolean,System.Boolean)">
+            <summary>
+            Generates a documentation ID string for a type.
+            This method handles nested types (replacing '+' with '.'),
+            generic types, arrays, pointers, by-ref types, and generic parameters.
+            The <paramref name="includeGenericArguments"/> flag controls whether
+            constructed generic type arguments are emitted, while <paramref name="omitGenericArity"/>
+            controls whether the generic arity marker (e.g. "`1") is appended.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.NormalizeDocId(System.String)">
+            <summary>
+            Normalizes a documentation comment ID to match the compiler-style format.
+            Strips the return type suffix for ordinary methods but retains it for conversion operators.
+            </summary>
+            <param name="docId">The documentation comment ID to normalize.</param>
+            <returns>The normalized documentation comment ID.</returns>
+        </member>
+    </members>
+</doc>

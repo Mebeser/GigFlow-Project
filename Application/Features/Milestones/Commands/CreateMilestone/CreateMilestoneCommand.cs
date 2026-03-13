@@ -1,0 +1,12 @@
+using MediatR;
+
+namespace GigFlow.Application.Features.Milestones.Commands.CreateMilestone;
+
+public class CreateMilestoneCommand : IRequest<Guid>
+{
+    public Guid ContractId { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string? Description { get; set; }
+    public decimal Amount { get; set; }
+    public DateTime DueDate { get; set; }
+}
