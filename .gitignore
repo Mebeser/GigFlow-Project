@@ -22,5 +22,5 @@
 .user
 *.userosscache
 *.suo
-
+.env
 build_log.txt
