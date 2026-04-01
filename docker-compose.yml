@@ -18,6 +18,6 @@ services:
     ports:
       - "5000:8080"
     environment:
-      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=GigFlowDb;User Id=sa;Password=GigFlow123!;TrustServerCertificate=True
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=GigFlowDb;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True
     depends_on:
       - sqlserver
