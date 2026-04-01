@@ -131,7 +131,7 @@
             <param name="contractId">Sözleşme ID'si</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.ReviewsController.GetByUser(System.Guid)">
-            <summary>Bir kullanıcı hakkında yapılan değerlendirmeleri listeler (reviewee)</summary>
+            <summary>Bir kullanıcı hakkında yapılan değerlendirmeleri listeler </summary>
             <param name="userId">Değerlendirilen kullanıcı ID'si</param>
         </member>
         <member name="M:GigFlow.Presentation.Controllers.ReviewsController.Create(GigFlow.Application.Features.Reviews.Commands.CreateReview.CreateReviewCommand)">
