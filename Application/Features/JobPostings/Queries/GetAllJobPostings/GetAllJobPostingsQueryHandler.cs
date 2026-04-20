@@ -1,9 +1,9 @@
 using AutoMapper;
 using GigFlow.Application.Features.JobPostings.DTOs;
+using GigFlow.Application.Interfaces;
 using GigFlow.Application.Repositories;
 using GigFlow.Application.Responses;
 using MediatR;
-using System.Linq;
 
 namespace GigFlow.Application.Features.JobPostings.Queries.GetAllJobPostings;
 
@@ -11,15 +11,25 @@ public class GetAllJobPostingsQueryHandler : IRequestHandler<GetAllJobPostingsQu
 {
     private readonly IJobPostingRepository _jobPostingRepository;
     private readonly IMapper _mapper;
+    private readonly ICacheService _cacheService;
 
-    public GetAllJobPostingsQueryHandler(IJobPostingRepository jobPostingRepository, IMapper mapper)
+    public GetAllJobPostingsQueryHandler(
+        IJobPostingRepository jobPostingRepository, 
+        IMapper mapper,
+        ICacheService cacheService)
     {
         _jobPostingRepository = jobPostingRepository;
         _mapper = mapper;
+        _cacheService = cacheService;
     }
 
     public async Task<PaginatedResult<GetJobPostingListDto>> Handle(GetAllJobPostingsQuery request, CancellationToken cancellationToken)
     {
+        var cacheKey = $"jobpostings_{request.SearchTerm}_{request.CategoryId}_{request.PageNumber}_{request.PageSize}";
+
+        var cached = await _cacheService.GetAsync<PaginatedResult<GetJobPostingListDto>>(cacheKey);
+        if (cached != null) return cached;
+
         var jobPostings = await _jobPostingRepository.GetAllAsync();
         
         var query = jobPostings.AsQueryable();
@@ -45,6 +55,10 @@ public class GetAllJobPostingsQueryHandler : IRequestHandler<GetAllJobPostingsQu
 
         var dtoList = _mapper.Map<List<GetJobPostingListDto>>(paginatedItems);
 
-        return new PaginatedResult<GetJobPostingListDto>(dtoList, totalCount, request.PageNumber, request.PageSize);
+        var result = new PaginatedResult<GetJobPostingListDto>(dtoList, totalCount, request.PageNumber, request.PageSize);
+        
+        await _cacheService.SetAsync(cacheKey, result, TimeSpan.FromMinutes(5));
+
+        return result;
     }
 }

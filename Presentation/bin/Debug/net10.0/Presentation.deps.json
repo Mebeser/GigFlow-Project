@@ -12,6 +12,7 @@
           "Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.0",
           "Microsoft.EntityFrameworkCore.Design": "10.0.3",
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "10.0.6",
           "Persistence": "1.0.0",
           "Scalar.AspNetCore": "2.13.8"
         },
@@ -582,6 +583,17 @@
           }
         }
       },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.6": {
+        "dependencies": {
+          "StackExchange.Redis": "2.7.27"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "assemblyVersion": "10.0.6.0",
+            "fileVersion": "10.0.626.17701"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyModel/10.0.3": {
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.DependencyModel.dll": {
@@ -720,6 +732,14 @@
           }
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.8": {
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.2.8.1080"
+          }
+        }
+      },
       "Scalar.AspNetCore/2.13.8": {
         "runtime": {
           "lib/net10.0/Scalar.AspNetCore.dll": {
@@ -829,6 +849,17 @@
           "lib/net9.0/Serilog.Sinks.File.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.0.0"
+          }
+        }
+      },
+      "StackExchange.Redis/2.7.27": {
+        "dependencies": {
+          "Pipelines.Sockets.Unofficial": "2.2.8"
+        },
+        "runtime": {
+          "lib/net6.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.7.27.49176"
           }
         }
       },
@@ -1201,6 +1232,13 @@
       "path": "microsoft.entityframeworkcore.sqlserver/10.0.0",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.10.0.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-26xccg2/iKzDb3SYcI/bsQoujno5bb8pUp1WSRZ5BP43qk2L25XgY80cDO0dr2qeu152mcF2Qn2FjLeZn1yZZQ==",
+      "path": "microsoft.extensions.caching.stackexchangeredis/10.0.6",
+      "hashPath": "microsoft.extensions.caching.stackexchangeredis.10.0.6.nupkg.sha512"
+    },
     "Microsoft.Extensions.DependencyModel/10.0.3": {
       "type": "package",
       "serviceable": true,
@@ -1299,6 +1337,13 @@
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
+    "Pipelines.Sockets.Unofficial/2.2.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
+      "path": "pipelines.sockets.unofficial/2.2.8",
+      "hashPath": "pipelines.sockets.unofficial.2.2.8.nupkg.sha512"
+    },
     "Scalar.AspNetCore/2.13.8": {
       "type": "package",
       "serviceable": true,
@@ -1368,6 +1413,13 @@
       "sha512": "sha512-fKL7mXv7qaiNBUC71ssvn/dU0k9t0o45+qm2XgKAlSt19xF+ijjxyA3R6HmCgfKEKwfcfkwWjayuQtRueZFkYw==",
       "path": "serilog.sinks.file/7.0.0",
       "hashPath": "serilog.sinks.file.7.0.0.nupkg.sha512"
+    },
+    "StackExchange.Redis/2.7.27": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Uqc2OQHglqj9/FfGQ6RkKFkZfHySfZlfmbCl+hc+u2I/IqunfelQ7QJi7ZhvAJxUtu80pildVX6NPLdDaUffOw==",
+      "path": "stackexchange.redis/2.7.27",
+      "hashPath": "stackexchange.redis.2.7.27.nupkg.sha512"
     },
     "System.ClientModel/1.5.1": {
       "type": "package",

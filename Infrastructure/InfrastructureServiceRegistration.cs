@@ -8,6 +8,8 @@ public static class InfrastructureServiceRegistration
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddScoped<GigFlow.Application.Interfaces.ITokenService, TokenService>();
+        services.AddScoped<GigFlow.Application.Interfaces.ICacheService, RedisCacheService>();
+        
         
         return services;
     }
