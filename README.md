@@ -37,6 +37,7 @@ Geleneksel N-Tier mimarilerde UI veya veritabanı değiştiğinde tüm katmanlar
 | Nesne Eşleme | AutoMapper 16 |
 | Veritabanı | MS SQL Server (Docker) |
 | API Dokümantasyonu | OpenAPI / Swagger |
+| Cache | Redis (StackExchange.Redis) |
 
 ---
 
